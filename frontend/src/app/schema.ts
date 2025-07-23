@@ -1,1 +1,1 @@
-// Optional local schema definition
+export const empty = {};

@@ -1,1 +1,57 @@
-{ "info": { "name": "JSONFormsDemo" } }
+
+{
+  "info": {
+    "_postman_id": "jsonforms-demo-id",
+    "name": "JSONFormsDemo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Schema (admin)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/form-schema?role=admin",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "form-schema"],
+          "query": [{ "key": "role", "value": "admin" }]
+        }
+      }
+    },
+    {
+      "name": "Get Form Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/form-data/123",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "form-data", "123"]
+        }
+      }
+    },
+    {
+      "name": "Post Form Data",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"username\": \"Lakshmi\", \"accessLevel\": \"admin\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/form-data/123",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "form-data", "123"]
+        }
+      }
+    }
+  ]
+}
